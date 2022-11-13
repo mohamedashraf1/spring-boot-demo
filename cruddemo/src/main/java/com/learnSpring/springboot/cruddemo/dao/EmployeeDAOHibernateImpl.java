@@ -69,7 +69,7 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 		// save employee
 		Query theQuery = 
 				currentSession.createQuery(
-						"delete from Employee where id=employeeId");
+						"delete from Employee where id=:employeeId");
 		theQuery.setParameter("employeeId", theId);
 		
 		theQuery.executeUpdate();
